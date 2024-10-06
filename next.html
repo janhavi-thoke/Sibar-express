@@ -1,0 +1,397 @@
+<!-- form section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>payment</title>
+    <script src = "https://kit.fontawesome.com/caffe67caf.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ojuju:wght@200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <style>
+        body {
+            margin-top: 2%;
+            background-color: darkslategray;
+            color: bisque;
+            font-family: Anta, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: normal;
+            height:max-content;
+            margin-left:-25%;
+            font-size: 20px;
+            margin-bottom: 5%;
+        }
+
+        form {
+            background-color: hsl(0, 0%, 20%);
+            padding: 33px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 10, 0.3);
+            width:500px;
+            border: 4px solid rgb(255, 234, 0);
+            margin-bottom: -10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid bisque;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+        }
+        #text{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid bisque;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+            font-size: 19px;
+            font-family: Anta;
+
+        }
+        #gender{
+            width: 100%;
+            border: 2px solid bisque;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+        }    
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: tomato;
+            transform: scale(1.09, 1.09);
+        }
+        .fa-hand-point-left{
+            font-size: 50px;
+            color: bisque;
+        }
+        .fa-hand-point-left:hover{
+            color:tomato;
+            transform: scale(1.06, 1.06);
+        }
+        #phone{
+            color: darkturquoise;
+            size: 30px;
+        }
+        .fa-sack-dollar{
+            color:rgb(255, 149, 0);
+            size:50px;
+        }
+        .fa-building-circle-check{
+            color:crimson;
+            size:50px;
+        }
+        .fa-user{
+            color:cornflowerblue;
+            size: 50px;
+        }
+        .fa-envelope{
+            size: 50px;
+            color: violet;
+        }
+        .fa-paper-plane{
+            size: 50px;
+            color: #4CAF50;
+        }
+
+        .btn{
+            font-family: Anta; 
+            font-size: 20px; 
+            color: black;
+            background-color: #45a049;
+            size: 30px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn:hover{
+            color: black;
+            transform: scale(1.09, 1.09);
+            background-color: seagreen;
+        }
+         
+        .pay{
+            color: darkorange;
+            background-color: black;
+            font-family: Anta;
+            font-size: 18px;
+            border-radius: 10px;
+            border-color: darkorange;
+            border: 3px solid;
+            padding: 10px;
+        }
+        .pay:hover{
+            transform: scale(1.09, 1.09);
+        }
+
+    </style>
+
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "dyAB7GUFzVtle9w8H",
+      });
+   })();
+</script>
+
+<script src="script.js">
+</script>
+
+
+</head>
+
+<body>
+
+
+<!-- left hand -->
+
+
+
+    
+    
+<!-- form section -->
+
+
+<div style="margin-left: 5%;">
+    <a href="cart.html" title="go back to home" target="_self">
+        <i class="fa-solid fa-hand-point-left"></i>
+    </a>
+    <br>
+    <br>
+
+    <form id = "orderForm" action = "https://formsubmit.co/adityatilekar21@gmail.com" method = "POST">
+
+        <label for="text"> <i class="fa-solid fa-paper-plane"></i> &nbsp; Name </label>
+        <input type = "text" id = "text" name = "name" required>
+
+
+        <br>
+        <br>
+
+        <label for="email"> <i class="fa-solid fa-envelope"> &nbsp; </i> Email </label>
+        <input style="font-family:Anta; font-size:20px; border-radius:10px;" type = "email" id = "email" name = "email" required>
+
+        <br>
+        <br>
+
+
+        <label for="phoneNumber"><i id = "phone" class="fa-solid fa-phone"></i> &nbsp; Phone Number:</label>
+        <input type="text" id="text" name="phoneNumber" pattern="[0-9]{10}" required title="Please enter a 10-digit phone number">
+        
+        <font> &nbsp; </font>
+        <label for = "gender" name = "gender"><i class="fa-solid fa-user"></i> &nbsp; Gender </label>
+        <select id = "gender" name = "gender" style="font-family:Anta; font-size:20px; border-radius:10px;" required>
+            <option value="male" style="font-family: Anta; font-size: 18px;"> Male </option>
+            <option value="female" style="font-family: Anta; font-size: 18px;"> Female </option>
+        </select>
+        
+
+    
+        <font> &nbsp; </font>
+        <br>
+        <br>
+        
+
+        <label for="roomNumber"> <i class="fa-solid fa-building-circle-check"></i> &nbsp; Room Number </label>
+        <input style="font-family:Anta; font-size:20px; border-radius:10px;" type="number" id="roomNumber" name="roomNumber" min="1" max="999" required title="Room number should be between 1 and 999">
+        
+        <font> &nbsp; </font>
+            
+        <label> <i class="fa-solid fa-sack-dollar"></i> &nbsp; Payment Method:</label>
+        
+        <br>
+        <input type="radio" id="cash" name="payment" value="cash">
+        <label for="cash" class="radio-label">Cash</label>
+        <input type="radio" id="online" name="payment" value="online">
+        <label for="online" class="radio-label">Online</label>
+        
+        <br>
+        <br>
+        <label for="website"> See Customers Order 
+            <a href="https://capten05ast.github.io/express/cart.html" target="_self" style="color: darkorange; font-family:Anta; font-size: 18px;">
+                Customers Cart [For Canteen]
+            </a>
+        </label>
+         
+        <br>
+        <br>
+        <br>
+
+
+<!-- reset button -->
+
+
+        <input type="reset" value="Reset" style="font-family: Anta; font-size: 20px; color: black">
+
+        
+<!-- submit button -->
+
+
+        <button id = "orderForm" type="submit" class = "btn" onclick="sendMail()" style="font-family: Anta; font-size: 20px; color: black; padding:10px; border: 3px solid black; border-radius: 10px; background-color: skyblue;"> Send details </button>
+        <br>
+        <br>
+        <button type="button" id="submitButton" style="font-family: Anta; font-size: 20px; color: black; padding:10px; border: 3px solid black; border-radius: 10px; background-color: skyblue;"> <i> When Will Your Order Arrive ? </i> </button>
+
+
+<!-- proceed button -->
+
+
+        <h4 style="font-family: Anta;"> click proceed if you choose online mode &nbsp;</h>
+        <button type="button" class="btn" style="font-family: Anta; font-size: 20px; color: black" onclick="proceedToPayment()">Proceed</button>
+        <br>
+    </form>
+
+
+<!-- javascript for functionality in the form (eventwise alert msgs and conditions) -->
+
+
+    <script>
+        document.getElementById('orderForm').addEventListener('buttom', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+    
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+            var currentMinute = currentTime.getMinutes();
+            var totalCurrentMinutes = currentHour * 60 + currentMinute;
+    
+            var message;
+    
+            if (totalCurrentMinutes >= 450 && totalCurrentMinutes < 675) { // 07:30 AM - 11:15 AM (lunch)
+                message = "Your order will arrive in the next lunch slot.";
+            } else if (totalCurrentMinutes >= 675 && totalCurrentMinutes < 1080) { // 11:15 AM - 06:00 PM (dinner)
+                message = "Your order will arrive in the next dinner slot.";
+            } else { // 09:00 PM - 07:30 AM (breakfast)
+                message = "Your order will arrive in the next breakfast slot.";
+            }
+    
+            if (paymentMethod === 'cash') {
+                message += " Payment method: Cash.";
+            } else if (paymentMethod === 'online') {
+                message += " Payment method: Online.";
+            }
+    
+            alert(message);
+        });
+    </script>
+
+
+<!-- the updated javascript functionality to display when order is going to arrive -->
+
+        <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            var paymentMethod = document.querySelector('input[name="payment"]:checked');
+            
+            if (!paymentMethod) {
+                alert("Please select a payment method.");
+                return;
+            }
+    
+            var paymentMethodValue = paymentMethod.value;
+    
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+            var currentMinute = currentTime.getMinutes();
+            var totalCurrentMinutes = currentHour * 60 + currentMinute;
+    
+            var message;
+    
+            if (totalCurrentMinutes >= 450 && totalCurrentMinutes < 675) { // 07:30 AM - 11:15 AM (lunch)
+                message = "Your order will arrive in the next lunch slot.";
+            } else if (totalCurrentMinutes >= 675 && totalCurrentMinutes < 1080) { // 11:15 AM - 06:00 PM (dinner)
+                message = "Your order will arrive in the next dinner slot.";
+            } else { // 09:00 PM - 07:30 AM (breakfast)
+                message = "Your order will arrive in the next breakfast slot.";
+            }
+    
+            if (paymentMethodValue === 'cash') {
+                message += " Payment method: Cash.";
+            } else if (paymentMethodValue === 'online') {
+                message += " Payment method: Online.";
+            }
+    
+            alert(message);
+        });
+    </script>
+
+
+<!-- javascript for proceed button (conditions) -->
+
+
+    <script>
+        function proceedToPayment() {
+            var paymentMethod = document.querySelector('input[name="payment"]:checked');
+            if (paymentMethod && paymentMethod.value === 'online') {
+                window.location.href = 'payment.html';
+            } else {
+                alert('Please select Online payment method to proceed.');
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+<!--
+<script>
+    var sendDetailsClicked = false;
+
+    function sendMail() {
+        sendDetailsClicked = true;
+        // Your code to send mail goes here
+    }
+
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        sendMail(); // Marking the "Send details" button as clicked when the form is submitted
+
+        // Rest of your code
+    });
+
+    document.getElementById('getConfirmationMessage').addEventListener('click', function() {
+        if (sendDetailsClicked) {
+            // Button functionality when "Send details" has been clicked
+            // Your code to get confirmation message goes here
+        } else {
+            alert('Please click on "Send details" first.');
+        }
+    });
+</script>
+-->
+
+    
+</div>
+
+</body>
+</html>
